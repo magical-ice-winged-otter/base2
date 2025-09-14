@@ -1,5 +1,12 @@
 # porytiles files are run through porytiles, which is a tool that converts raw png layers to genuine tilesets
 
+# GUIDE FOR UPDATING/ADDING NEW TILESETS
+# 1. Create a new primary tileset via porymap.
+# 2. Inside that primary tileset's directory, create a new folder called porytiles-data.
+#    Now, metatiles.bin will be generated automatically.
+# 3. To create a secondary tileset, just largely do the same thing as the above.
+# 4. Create a new secondary-tileset-macro where the primary tileset that you're using is the 2nd argument of that macro.
+
 # -disable-attribute-generation disables using an attributes.csv file so that we can use porymap instead to set the attributes.
 PORYTILES_FLAGS := -disable-attribute-generation -Wall
 
