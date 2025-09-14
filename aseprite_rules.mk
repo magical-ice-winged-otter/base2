@@ -6,14 +6,34 @@
 #    Now, metatiles.bin will be generated automatically.
 # 3. To create a secondary tileset, just largely do the same thing as the above.
 # 4. Create a new secondary-tileset-macro where the primary tileset that you're using is the 2nd argument of that macro.
+# For debugging purposes, you can use the shell touch command in order to trigger rebuilding of the artifacts.
 
+TILESETS_DIR := data/tilesets/
+
+# == Aseprite ==
+ASEPRITE_FILE := tileset.aseprite
+
+AUTO_GEN_TARGETS += $(patsubst %/$(ASEPRITE_FILE),%/top.png,$(shell find $(TILESETS_DIR) -name $(ASEPRITE_FILE)))
+AUTO_GEN_TARGETS += $(patsubst %/$(ASEPRITE_FILE),%/middle.png,$(shell find $(TILESETS_DIR) -name $(ASEPRITE_FILE)))
+AUTO_GEN_TARGETS += $(patsubst %/$(ASEPRITE_FILE),%/bottom.png,$(shell find $(TILESETS_DIR) -name $(ASEPRITE_FILE)))
+
+%/top.png: %/$(ASEPRITE_FILE)
+	aseprite -b --layer top $< --save-as $@
+
+%/middle.png: %/$(ASEPRITE_FILE)
+	aseprite -b --layer middle $< --save-as $@
+
+%/bottom.png: %/$(ASEPRITE_FILE)
+	aseprite -b --layer bottom $< --save-as $@
+
+# == Porytiles ==
 # -disable-attribute-generation disables using an attributes.csv file so that we can use porymap instead to set the attributes.
 PORYTILES_FLAGS := -disable-attribute-generation -Wall
 
 #  Book keeping
 METATILE_BEHAVIORS_DIR := include/constants/metatile_behaviors.h
-PRIMARY_TILESET_DIR := data/tilesets/primary
-SECONDARY_TILESET_DIR := data/tilesets/secondary
+PRIMARY_TILESET_DIR := $(TILESETS_DIR)/primary
+SECONDARY_TILESET_DIR := $(TILESETS_DIR)/secondary
 PORYTILES_DATA_DIR := porytiles-data
 PORYTILES_BUILD_ARTIFACTS := top.png middle.png bottom.png attributes.csv
 
