@@ -8,7 +8,7 @@
 # 4. Create a new secondary-tileset-macro where the primary tileset that you're using is the 2nd argument of that macro.
 # For debugging purposes, you can use the shell touch command in order to trigger rebuilding of the artifacts.
 
-TILESETS_DIR := data/tilesets/
+TILESETS_DIR := data/tilesets
 
 # == Aseprite ==
 ASEPRITE_FILE := tileset.aseprite
