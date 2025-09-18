@@ -21,6 +21,8 @@ UNUSED_ERROR ?= 0
 DEBUG        ?= 0
 # Adds -flto flag, which increases link time but results in a more efficient binary (especially in audio processing)
 LTO          ?= 0
+# Execute the porytiles compiler
+TILESET      ?= 0
 
 ifeq (compare,$(MAKECMDGOALS))
   COMPARE := 1
@@ -354,6 +356,9 @@ include spritesheet_rules.mk
 include json_data_rules.mk
 include audio_rules.mk
 include trainer_rules.mk
+ifeq ($(TILESET),1)
+  include porytiles_rules.mk
+endif
 
 AUTO_GEN_TARGETS += $(patsubst %.pory,%.inc,$(shell find data/ -type f -name '*.pory'))
 

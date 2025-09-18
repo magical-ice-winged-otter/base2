@@ -56,3 +56,6 @@ tools/compresSmol/compresSmolTilemap
 *.fastSmol
 *.smolTM
 __pycache__
+**/porytiles-data/top.png
+**/porytiles-data/middle.png
+**/porytiles-data/bottom.png
