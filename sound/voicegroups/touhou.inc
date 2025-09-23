@@ -1,21 +1,21 @@
 voice_group touhou
-	voice_keysplit_all voicegroup001 @ Drums / Acoustic Grand
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Bright Acoustic
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Electric Grand
+	 @ Drums / Acoustic Grand
+	voice_keysplit voicegroup_piano_keysplit, keysplit_piano @ Bright Acoustic
+	voice_directsound 60, 0, DirectSoundWaveData_steinway_b_piano, 255, 165, 103, 235 @ Electric Grand
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Honky-Tonk
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Electric Piano 1
-	voice_keysplit voicegroup005, KeySplitTable1 @ Electric Piano 2
+	voice_keysplit voicegroup_piano_keysplit, keysplit_piano @ Electric Piano 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Harpsichord
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Clav
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Celesta
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_glockenspiel, 255, 165, 72, 249 @ Glockenspiel
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Music Box
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Vibraphone
-	voice_keysplit voicegroup239, KeySplitTable1 @ Marimba
+	voice_keysplit voicegroup_keysplit_hgss_marimba, keysplit_hgss_marimba_music_box_sampled_square @ Marimba
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_xylophone, 255, 235, 0, 204 @ Xylophone
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_tubular_bell, 255, 216, 90, 242 @ Tubular Bells
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Dulcimer
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Draawnar Organ
+	voice_keysplit voicegroup_keysplit_hgss_drawbar_organ, keysplit_hgss_organ_accordion_harp_timpani @ Drawbar Organ
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_organ2, 255, 0, 255, 210 @ Percussive Organ
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Rock Organ
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Church Organ
@@ -29,17 +29,17 @@ voice_group touhou
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Electric Guitar(clean)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Electric Guitar(Muted)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Overdriven Guitar
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Distortion guitar
+	voice_keysplit voicegroup_keysplit_dp_distortion_guitar_1, keysplit_dp_distortion_guitar_1 @ Distortion guitar
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Guitar Harmonics
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Acoustic Bass
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Electric bass(finger)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Electric bass(pick)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Fretless bass
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 253, 0, 188 @ Fretless bass
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Slap Bass 1
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Slap Bass 2
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Synth Bass 1
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_synth_bass, 255, 252, 0, 115 @ Synth Bass 1
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Synth Bass 2
-	voice_keysplit voicegroup213, KeySplitTable24 @ Violin
+	voice_keysplit voicegroup_keysplit_hgss_violin, keysplit_hgss_violin @ Violin
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Viola
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Cello
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Contrabass
@@ -47,7 +47,7 @@ voice_group touhou
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Pizzicato Strings
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Orchestral Strings
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_timpani, 255, 0, 180, 246 @ Timpani
-	voice_keysplit voicegroup006, KeySplitTable2     @ String Ensemble 1
+	voice_keysplit voicegroup_strings_keysplit, keysplit_strings @ String Ensemble 1
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ String Ensemble 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ SynthStrings 1
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ SynthStrings 2
@@ -55,12 +55,12 @@ voice_group touhou
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Voice Oohs
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Synth Voice
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Orchestra hit
-	voice_keysplit voicegroup007, KeySplitTable3 @ Trumpet
+	voice_keysplit voicegroup_trumpet_keysplit, keysplit_trumpet @ Trumpet
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Trombone
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Tuba
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Muted Trumpet
-	voice_keysplit voicegroup009, KeySplitTable5 @ French Horn
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Brass Section
+	voice_keysplit voicegroup_french_horn_keysplit, keysplit_french_horn @ French Horn
+	voice_keysplit voicegroup_keysplit_hgss_piano_3, keysplit_hgss_piano_3 @ Brass Section
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Synth Brass 1
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Synth Brass 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Soprano Sax
@@ -79,8 +79,8 @@ voice_group touhou
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Skakuhachi
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Whistle
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Ocarina
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Lead 1 (square)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Lead 2 (sawtooth)
+	voice_directsound 60, 0, DirectSoundWaveData_hg_130jdrumh, 255, 0, 227, 171 @ Lead 1 (square)
+	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 171 @ Lead 2 (sawtooth)
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_6, 0, 7, 7, 0 @ Lead 3 (calliope)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Lead 4 (chiff)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Lead 5 (charang)
@@ -106,7 +106,7 @@ voice_group touhou
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ FX 8 (sci-fi)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Sitar
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Banjo
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Shamisen
+	voice_keysplit voicegroup_keysplit_hgss_shamisen, keysplit_hgss_shamisen @ Shamisen
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Koto
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Kalimba
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Bagpipe
@@ -116,14 +116,14 @@ voice_group touhou
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Agogo
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Steel Drums
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Woodblock
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Taiko Drum
+	voice_directsound 63, 64, DirectSoundWaveData_sc88pro_taiko, 255, 0, 255, 0 @ Taiko Drum
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Synth Drum
 	voice_directsound 61, 102, DirectSoundWaveData_dp_cymbal1_16, 255, 250, 0, 216 @ Reverse Cymbal
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Guitar Fret Noise
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Breath Noise
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ voice_directsound 60, 0, DirectSoundWaveData_steinway_b_piano, 255, 165, 103, 235 @ Acoustic Grand (right) @ Seashore
+	voice_keysplit voicegroup_keysplit_hgss_vibraphone, keysplit_hgss_piano_2_vibraphone_glockglockenspiel @ voice_directsound 60, 0, DirectSoundWaveData_steinway_b_piano, 255, 165, 103, 235 @ Acoustic Grand (right) @ Seashore
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Bird Tweet
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Telephone Ring
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @ Helicopter
 	voice_noise_alt 60, 0, 0, 0, 1, 7, 1 @ Applause
-	voice_noise_alt 60, 0, 0, 0, 1, 0, 0 @ Gunshot
+	voice_keysplit_all voicegroup_allkeysplit_bw_drum_2 @ Gunshot
