@@ -301,3 +301,6 @@
 .include "sound/voicegroups/drumsets/allkeysplit_bw_drum_4.inc"                       @ .include "sound/voicegroups/voicegroup284.inc"
 .include "sound/voicegroups/drumsets/allkeysplit_bw_drum_5.inc"                       @ .include "sound/voicegroups/voicegroup285.inc"
 .include "sound/voicegroups/drumsets/allkeysplit_bw_drum_6.inc"                       @ .include "sound/voicegroups/voicegroup286.inc"
+
+@ Start Custom Music
+.include "sound/voicegroups/touhou.inc"
